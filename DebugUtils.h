@@ -6,9 +6,11 @@
 #ifdef DEBUG
 
   #define DPRINT(...) Serial.print( __VA_ARGS__ )           // DPRINT is a macro, debug print
-  #define DPRINTS(...) Serial.print( F( __VA_ARGS__ ))
   #define DPRINTLN(...) Serial.println( __VA_ARGS__ )       // DPRINTLN is a macro, debug print with new line
-  #define DPRINTLNS(...) Serial.println( F( __VA_ARGS__ ))
+  #define DPRINTS(...) Serial.print( F( __VA_ARGS__ ))
+  #define DPRINTSLN(...) Serial.println( F( __VA_ARGS__ ))
+  #define DPRINTV( ... ) Serial.print( F( #__VA_ARGS__ " : " )); DPRINT( __VA_ARGS__ )
+  #define DPRINTVLN( ... ) Serial.print( F( #__VA_ARGS__ " : " )); DPRINTLN( __VA_ARGS__ )
 
   #define DPRINT2( str, ... ) Serial.print( F( str )); Serial.print( __VA_ARGS__ );
   #define DPRINTLN2( str, ... ) Serial.print( F( str )); Serial.println( __VA_ARGS__ );
@@ -46,7 +48,7 @@
   #define DPRINT(...)   // now defines a blank line
   #define DPRINTS(...)
   #define DPRINTLN(...)
-  #define DPRINTLNS(...)
+  #define DPRINTSLN(...)
   #define DPRINT2(...)
   #define DPRINTLN2(...)
   #define DPRINTLN_POINT(...)

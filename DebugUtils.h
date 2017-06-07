@@ -28,14 +28,7 @@
 
   #if defined (__SAM3X8E__)
   #else
-    int freeRAM()
-    {
-      int size = RAMEND;
-      byte *buf;
-      while ((buf = (byte *) malloc(--size)) == NULL);
-      free(buf);
-      return size;
-    }
+    extern int freeRAM();
 
     #define DPRINTLN_FREERAM \
       Serial.print( F( "Free RAM : " )); \

@@ -13,7 +13,7 @@
   #define DPRINTVLN( ... ) Serial.print( F( #__VA_ARGS__ " : " )); DPRINTLN( __VA_ARGS__ )
 
   #define DPRINT2( str, ... ) Serial.print( F( str )); Serial.print( __VA_ARGS__ );
-  #define DPRINTLN2( str, ... ) Serial.print( F( str )); Serial.println( __VA_ARGS__ );
+  #define DPRINT2LN( str, ... ) Serial.print( F( str )); Serial.println( __VA_ARGS__ );
 
   #define DPRINTLN_POINT( str ) \
     Serial.print( F( str )); \
@@ -43,7 +43,7 @@
   #define DPRINTLN(...)
   #define DPRINTSLN(...)
   #define DPRINT2(...)
-  #define DPRINTLN2(...)
+  #define DPRINT2LN(...)
   #define DPRINTLN_POINT(...)
   #define DPRINTLN_FREERAM(...)
   #define DELAY(...)
